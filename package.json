@@ -1,5 +1,5 @@
 {
-  "name": "ocrk",
+  "name": "ocrify",
   "version": "0.1.0",
   "description": "Secure OCR toolkit for fintech document processing with confidence scoring",
   "main": "dist/index.js",
