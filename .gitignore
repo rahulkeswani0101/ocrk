@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.log
+.env
+.env.*
+coverage/
+.DS_Store
+*.tgz
+
+# Security: Never commit test documents with real PII
+test-documents/real/

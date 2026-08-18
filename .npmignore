@@ -1,0 +1,25 @@
+# Source files (only dist/ ships)
+src/
+examples/
+*.ts
+!dist/**/*.d.ts
+
+# Dev & config
+tsconfig.json
+.eslintrc*
+.gitignore
+.env*
+coverage/
+.DS_Store
+
+# Test files
+**/*.test.*
+**/*.spec.*
+
+# Git
+.git/
+
+# IDE
+.vscode/
+.idea/
+.kiro/

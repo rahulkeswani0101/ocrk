@@ -1,0 +1,58 @@
+{
+  "name": "ocrk",
+  "version": "0.1.0",
+  "description": "Secure OCR toolkit for fintech document processing with confidence scoring",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest --run",
+    "lint": "eslint src/",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "size": "npm pack --dry-run"
+  },
+  "keywords": [
+    "ocr",
+    "fintech",
+    "pan-card",
+    "aadhaar",
+    "document-verification",
+    "kyc",
+    "confidence-score",
+    "tesseract",
+    "image-to-text"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "tesseract.js": "^5.1.1",
+    "sharp": "^0.35.3",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.11.0",
+    "vitest": "^1.3.0",
+    "eslint": "^8.57.0"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ]
+}
