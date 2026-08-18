@@ -1,4 +1,4 @@
-# ocrify
+# docscanr
 
 Secure OCR toolkit for document processing. Extracts structured fields from images with per-field confidence scoring. Built for Indian KYC documents — works with any image-to-text use case.
 
@@ -13,7 +13,7 @@ Secure OCR toolkit for document processing. Extracts structured fields from imag
 ## Install
 
 ```bash
-npm install ocrify
+npm install docscanr
 ```
 
 Requires **Node.js >= 20.9**
@@ -21,7 +21,7 @@ Requires **Node.js >= 20.9**
 ## Usage
 
 ```typescript
-import { OCRToolkit } from 'ocrify';
+import { OCRToolkit } from 'docscanr';
 
 const toolkit = new OCRToolkit();
 
