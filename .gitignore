@@ -9,3 +9,6 @@ coverage/
 
 # Security: Never commit test documents with real PII
 test-documents/real/
+
+# Tesseract language data
+*.traineddata

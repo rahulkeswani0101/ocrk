@@ -1,9 +1,10 @@
 {
   "name": "docscanr",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Secure OCR toolkit for fintech document processing with confidence scoring",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "browser": false,
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

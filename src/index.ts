@@ -5,6 +5,8 @@ import { OutputSanitizer } from './security/sanitizer';
 import { PANParser } from './parsers/pan-parser';
 import { AadhaarParser } from './parsers/aadhaar-parser';
 import { ChequeParser } from './parsers/cheque-parser';
+import { PassportParser } from './parsers/passport-parser';
+import { VoterIDParser } from './parsers/voterid-parser';
 import { OCRResult, OVDResult, OVDType, ProcessingOptions, SecurityConfig } from './types';
 
 export interface ToolkitOptions {
@@ -61,8 +63,12 @@ export class OCRToolkit {
         return new AadhaarParser(this.sanitizer, { maskAadhaar: this.maskSensitiveData });
       case 'cheque':
         return new ChequeParser(this.sanitizer);
+      case 'passport':
+        return new PassportParser(this.sanitizer);
+      case 'voter-id':
+        return new VoterIDParser(this.sanitizer);
       default:
-        throw new Error(`Unsupported document type: ${type}. Supported: pan, aadhaar, cheque`);
+        throw new Error(`Unsupported document type: ${type}. Supported: pan, aadhaar, cheque, passport, voter-id`);
     }
   }
 
@@ -78,6 +84,8 @@ export { ImagePreprocessor } from './engine/image-preprocessor';
 export { PANParser } from './parsers/pan-parser';
 export { AadhaarParser } from './parsers/aadhaar-parser';
 export { ChequeParser } from './parsers/cheque-parser';
+export { PassportParser } from './parsers/passport-parser';
+export { VoterIDParser } from './parsers/voterid-parser';
 export { BaseOVDParser } from './parsers/base-parser';
 
 export type {

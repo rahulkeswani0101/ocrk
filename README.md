@@ -1,11 +1,13 @@
 # docscanr
 
-Secure OCR toolkit for document processing. Extracts structured fields from images with per-field confidence scoring. Built for Indian KYC documents — works with any image-to-text use case.
+Secure OCR toolkit for document processing. Extracts structured fields from images with per-field confidence scoring. Supports Indian KYC/identity documents.
 
 ## Features
 
 - **PAN Card** — PAN number, Name, Father's Name, DOB
 - **Aadhaar Card** — Aadhaar number (masked), Name, DOB, Gender, Address
+- **Passport** — Passport number, Name, DOB, Gender, Expiry, Place of Birth, Nationality
+- **Voter ID** — EPIC number, Name, Father/Husband Name, DOB, Gender, Address
 - **Bank Cheque** — IFSC, Account Number, Bank Name, MICR, Cheque Number
 - **Confidence Scoring** — Per-field + document-level (0-1)
 - **Security-first design** — Built for fintech compliance
@@ -16,7 +18,7 @@ Secure OCR toolkit for document processing. Extracts structured fields from imag
 npm install docscanr
 ```
 
-Requires **Node.js >= 20.9**
+Requires **Node.js >= 20.9** (server-side only, not for browser)
 
 ## Usage
 
@@ -88,7 +90,7 @@ Extract raw text from an image.
 Parse a document into structured fields.
 
 - `input` — File path (`string`) or image `Buffer`
-- `type` — `'pan'` | `'aadhaar'` | `'cheque'`
+- `type` — `'pan'` | `'aadhaar'` | `'cheque'` | `'passport'` | `'voter-id'`
 - Returns: `{ documentType, documentConfidence, fields, isValid, validationErrors, processingTimeMs }`
 
 ## License

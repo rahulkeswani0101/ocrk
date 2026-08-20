@@ -33,7 +33,7 @@ export interface OVDResult {
   processingTimeMs: number;
 }
 
-export type OVDType = 'pan' | 'aadhaar' | 'cheque';
+export type OVDType = 'pan' | 'aadhaar' | 'cheque' | 'passport' | 'voter-id';
 
 export interface ProcessingOptions {
   languages?: string[];
